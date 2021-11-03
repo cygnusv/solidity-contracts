@@ -30,4 +30,8 @@ interface IApplication {
     ///         `involuntaryAuthorizationDecrease` call failed.
     function involuntaryAuthorizationDecrease(address operator, uint96 amount)
         external;
+
+    /// @notice Returns the overall T amount that's authorized for this
+    ///         application
+    function totalAuthorized() external view returns (uint96);
 }
