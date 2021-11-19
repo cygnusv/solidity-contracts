@@ -20,6 +20,7 @@
     "@keep-network/prettier-config-keep": "github:keep-network/prettier-config-keep#d6ec02e",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/hardhat-upgrades": "^1.12.0",
     "chai": "^4.3.4",
     "eslint": "^7.27.0",
     "eslint-config-keep": "github:keep-network/eslint-config-keep#0c27ade",
@@ -36,6 +37,7 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.3",
+    "@openzeppelin/contracts-upgradeable": "^4.3",
     "@thesis/solidity-contracts": "github:thesis/solidity-contracts#507c647"
   }
 }

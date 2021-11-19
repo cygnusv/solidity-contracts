@@ -1,6 +1,8 @@
-require("@nomiclabs/hardhat-waffle")
-require("hardhat-gas-reporter")
 require("@keep-network/hardhat-helpers")
+require('@nomiclabs/hardhat-ethers');
+require("@nomiclabs/hardhat-waffle")
+require('@openzeppelin/hardhat-upgrades');
+require("hardhat-gas-reporter")
 
 module.exports = {
   solidity: {
