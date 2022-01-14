@@ -240,8 +240,8 @@ contract TokenStaking is Initializable, IStaking, Checkpoints {
         keepStake = _keepStake;
         nucypherStakingContract = _nucypherStakingContract;
 
-        keepRatio = _keepVendingMachine.ratio();
-        nucypherRatio = _nucypherVendingMachine.ratio();
+        keepRatio = 4783188631255016; //_keepVendingMachine.ratio();
+        nucypherRatio = 3259242493160745; //_nucypherVendingMachine.ratio();
     }
 
     function initialize() external initializer {
