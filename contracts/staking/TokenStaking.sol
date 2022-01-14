@@ -230,9 +230,11 @@ contract TokenStaking is Initializable, IStaking, Checkpoints {
         // calls to check contracts are working
         require(
             _token.totalSupply() > 0 &&
-                _keepStakingContract.ownerOf(address(0)) == address(0) &&
-                _nucypherStakingContract.getAllTokens(address(0)) == 0 &&
-                AddressUpgradeable.isContract(address(_keepStake)),
+                //_keepStakingContract.ownerOf(address(0)) == address(0) &&
+                _nucypherStakingContract.getAllTokens(address(0)) == 0
+                // &&
+                // AddressUpgradeable.isContract(address(_keepStake))
+                ,
             "Wrong input parameters"
         );
         token = _token;
