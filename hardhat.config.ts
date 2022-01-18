@@ -92,6 +92,7 @@ const config: HardhatUserConfig = {
       development: ["external/npm/@keep-network/keep-core/artifacts"],
       ropsten: ["external/npm/@keep-network/keep-core/artifacts"],
       mainnet: ["./external/mainnet"],
+      rinkeby: ["./external/rinkeby"],
     },
   },
   namedAccounts: {
