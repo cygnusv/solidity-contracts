@@ -25,3 +25,6 @@ export default func
 
 func.tags = ["KeepStake"]
 func.dependencies = ["KeepTokenStaking"]
+func.skip = async function (hre: HardhatRuntimeEnvironment): Promise<boolean> {
+  return true
+}

@@ -14,5 +14,5 @@ func.tags = ["TransferOwnershipT"]
 func.dependencies = ["T"]
 func.runAtTheEnd = true
 func.skip = async function (hre: HardhatRuntimeEnvironment): Promise<boolean> {
-  return hre.network.name !== "mainnet"
+  return true
 }

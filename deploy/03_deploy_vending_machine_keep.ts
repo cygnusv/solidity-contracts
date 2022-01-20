@@ -41,3 +41,6 @@ export default func
 
 func.tags = ["VendingMachineKeep"]
 func.dependencies = ["T", "KeepToken"]
+func.skip = async function (hre: HardhatRuntimeEnvironment): Promise<boolean> {
+  return true
+}

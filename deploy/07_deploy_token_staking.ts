@@ -6,11 +6,11 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await getNamedAccounts()
 
   const T = await deployments.get("T")
-  const KeepTokenStaking = await deployments.get("KeepTokenStaking")
+  const KeepTokenStaking = T // await deployments.get("KeepTokenStaking")
   const NuCypherStakingEscrow = await deployments.get("NuCypherStakingEscrow")
-  const VendingMachineKeep = await deployments.get("VendingMachineKeep")
-  const VendingMachineNuCypher = await deployments.get("VendingMachineNuCypher")
-  const KeepStake = await deployments.get("KeepStake")
+  const VendingMachineKeep = T // await deployments.get("VendingMachineKeep")
+  const VendingMachineNuCypher = T // await deployments.get("VendingMachineNuCypher")
+  const KeepStake = T // await deployments.get("KeepStake")
 
   const TokenStaking = await deployments.deploy("TokenStaking", {
     from: deployer,
@@ -23,6 +23,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
       KeepStake.address,
     ],
     log: true,
+    estimatedGasLimit: 10000000,
+    gasLimit: 10000000,
   })
 
   if (hre.network.tags.tenderly) {
@@ -38,9 +40,4 @@ export default func
 func.tags = ["TokenStaking"]
 func.dependencies = [
   "T",
-  "KeepTokenStaking",
-  "NuCypherStakingEscrow",
-  "VendingMachineKeep",
-  "VendingMachineNuCypher",
-  "KeepStake",
 ]

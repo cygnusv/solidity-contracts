@@ -49,3 +49,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 export default func
 
 func.tags = ["KeepToken"]
+func.skip = async function (hre: HardhatRuntimeEnvironment): Promise<boolean> {
+  return true
+}

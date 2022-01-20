@@ -13,6 +13,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     "NuCypherStakingEscrow"
   )
 
+  log(`NuCypherStakingEscrow: ${NuCypherStakingEscrow}`)
+
   if (
     NuCypherStakingEscrow &&
     helpers.address.isValid(NuCypherStakingEscrow.address)

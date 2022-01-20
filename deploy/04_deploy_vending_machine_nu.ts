@@ -37,3 +37,6 @@ export default func
 
 func.tags = ["VendingMachineNuCypher"]
 func.dependencies = ["T", "NuCypherToken", "NuCypherStakingEscrow"]
+func.skip = async function (hre: HardhatRuntimeEnvironment): Promise<boolean> {
+  return true
+}
