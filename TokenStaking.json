@@ -1,5 +1,5 @@
 {
-  "address": "0x44FFe6b958A69c838ecEF2B850f0500e7EEeE2e6",
+  "address": "0xa90e3575f37f7052a261033C69FfF17BBB18c260",
   "abi": [
     {
       "type": "constructor",
@@ -634,58 +634,6 @@
     },
     {
       "type": "function",
-      "name": "forceAuthorizationCap",
-      "constant": false,
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address[]",
-          "name": "_stakingProviders"
-        }
-      ],
-      "outputs": []
-    },
-    {
-      "type": "function",
-      "name": "forceAuthorizationCap",
-      "constant": false,
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address",
-          "name": "stakingProvider"
-        }
-      ],
-      "outputs": []
-    },
-    {
-      "type": "function",
-      "name": "forceBetaStakerDecreaseAuthorization",
-      "constant": false,
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address[]",
-          "name": "betaStakers"
-        }
-      ],
-      "outputs": []
-    },
-    {
-      "type": "function",
-      "name": "forceBetaStakerDecreaseAuthorization",
-      "constant": false,
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address",
-          "name": "betaStaker"
-        }
-      ],
-      "outputs": []
-    },
-    {
-      "type": "function",
       "name": "forceDecreaseAuthorization",
       "constant": false,
       "payable": false,
@@ -711,25 +659,6 @@
       "outputs": [
         {
           "type": "uint256"
-        }
-      ]
-    },
-    {
-      "type": "function",
-      "name": "getAvailableOptOutAmount",
-      "constant": true,
-      "stateMutability": "view",
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address",
-          "name": "stakingProvider"
-        }
-      ],
-      "outputs": [
-        {
-          "type": "uint96",
-          "name": "availableToOptOut"
         }
       ]
     },
@@ -917,23 +846,6 @@
     },
     {
       "type": "function",
-      "name": "optOutDecreaseAuthorization",
-      "constant": false,
-      "payable": false,
-      "inputs": [
-        {
-          "type": "address",
-          "name": "stakingProvider"
-        },
-        {
-          "type": "uint96",
-          "name": "amount"
-        }
-      ],
-      "outputs": []
-    },
-    {
-      "type": "function",
       "name": "pauseApplication",
       "constant": false,
       "payable": false,
@@ -956,7 +868,8 @@
           "name": "stakingProvider"
         },
         {
-          "type": "address"
+          "type": "address",
+          "name": "application"
         },
         {
           "type": "uint96",
