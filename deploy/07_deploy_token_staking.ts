@@ -8,9 +8,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { execute, log } = deployments
   const { deployer } = await getNamedAccounts()
 
-  const T = await deployments.get("T")
+  // const T = await deployments.get("T")
 
-  const tokenStakingConstructorArgs = [T.address]
+  const tokenStakingConstructorArgs = ["0xcdf7028ceab81fa0c6971208e83fa7872994bee5"]
   const tokenStakingInitializerArgs = []
 
   // TODO: Consider upgradable deployment also for sepolia.
@@ -70,4 +70,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 export default func
 
 func.tags = ["TokenStaking"]
-func.dependencies = ["T", "VendingMachineNuCypher", "MintT"]
+// func.dependencies = ["T", "VendingMachineNuCypher", "MintT"]

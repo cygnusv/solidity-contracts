@@ -46,17 +46,17 @@ const config: HardhatUserConfig = {
       chainId: 1101,
       tags: ["allowStubs"],
     },
-    sepolia: {
-      url: process.env.CHAIN_API_URL || "",
-      chainId: 11155111,
-      accounts: process.env.CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY
-        ? [
-            process.env.CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY,
-            process.env.KEEP_CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY, // TODO: verify if we have different owner here or can we remove this
-          ]
-        : undefined,
-      tags: ["tenderly"],
-    },
+    // sepolia: {
+    //   url: process.env.CHAIN_API_URL || "",
+    //   chainId: 11155111,
+    //   accounts: process.env.CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY
+    //     ? [
+    //         process.env.CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY,
+    //         process.env.KEEP_CONTRACT_OWNER_ACCOUNT_PRIVATE_KEY, // TODO: verify if we have different owner here or can we remove this
+    //       ]
+    //     : undefined,
+    //   tags: ["tenderly"],
+    // },
     mainnet: {
       url: process.env.CHAIN_API_URL || "",
       chainId: 1,
@@ -87,7 +87,7 @@ const config: HardhatUserConfig = {
     deployer: {
       default: 1, // take the first account as deployer
       sepolia: 0,
-      // mainnet: "0x123694886DBf5Ac94DDA07135349534536D14cAf",
+      mainnet: "0xfffd7092685bdeebd121d1a0fea3c349114cce50",
     },
     thresholdCouncil: {
       mainnet: "0x9F6e831c8F8939DC0C830C6e492e7cEf4f9C2F5f",
